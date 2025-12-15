@@ -1,0 +1,113 @@
+*{box-sizing: border-box;}
+html, body
+{
+	background: #F9B0FA;
+	font-family: Arial, Helvetica;
+	margin: 0;
+	padding: 0;
+}
+
+
+.container
+{
+	max-width: 900px;
+	margin: 2rem auto;
+	padding: 0 1rem;
+}
+
+
+/* header */
+.site-header
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: #F063FA;
+	position: sticky;
+	top: 0;
+	border-bottom: 3px solid var(--primary);
+}
+
+.logo 
+{
+	color: var(--primary);
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+
+/* navigation */
+.site-nav ul 
+{
+	list-style: none;
+	display: flex;
+	gap: 1rem;
+}
+
+.site-nav a 
+{
+	text-decoration: none;
+	color: var(--text);
+	padding: 0.5rem 0.75rem;
+	border-radius: 6px;
+	transition: background 0.3s, color 0.3s;
+}
+
+.site-nav a:hover,
+.site-nav a.active 
+{
+	background: var(--primary);
+	color: #FFFFFF;
+}
+
+/* Hide the menu checkbox by default*/	
+.menu-toggle
+{
+	display: none;
+}
+
+.menu-btn
+{
+	display: none;
+	font-size: 2rem;
+	color: var(--text);
+	cursor: pointer;
+	user-select: none;
+}
+
+/* Mobile styles - everything under 768 px wide */
+@media (max-width: 768px)
+{
+
+/* Show the menu button on smaller sreens */
+.menu-btn
+{
+	display: block;
+}
+
+/* Stack the navigation vertically and hide it by default */
+.site-nav ul
+{
+	flex-direction: column;
+	position: absolute;
+	top: 60px;
+	right: 0;
+	background: #F063FA;
+	width: 200px;
+	padding: 1rem;
+	border-radius: 8px;
+	display: none;
+}
+/* When the checkbox is checked, show the menu */
+.menu-toggle:checked + .menu-btn + .site-nav ul
+{
+	display: flex;
+}
+
+
+	
+	
+
+
+
+
