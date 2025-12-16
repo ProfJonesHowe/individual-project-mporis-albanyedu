@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find the Missing Passcode</title>
+</head>
+<body>
+
+<p>
+<img src="lock.jpg" alt="Picture;">
+</p>
+
+<h2>Help me Find the Passcode</h2>
+
+<p id="output1">
+<p><button onclick="showInnerHTML()">Clue #1</button></p>
+<p><button onclick="useDocumentWrite()">Clue #2</button></p>
+
+<script src="output.js"></script>
+
+<h2>Enter Passcode Below:</h2>
+    <input type="text" id="answerBox" placeholder="Enter Passcode">
+    <button onclick="checkAnswer()">Submit</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkAnswer() {
+            let userAnswer = document.getElementById("answerBox").value;
+
+            if (userAnswer === "543") {
+                document.getElementById("result").textContent = "Correct!";
+                document.getElementById("result").style.color = "green";
+            } else {
+                document.getElementById("result").textContent = "Try Again!";
+                document.getElementById("result").style.color = "red";
+            }
+        }
+    </script>
+
+<h2>Stumped?</h2>
+<p><button onclick="showAlert()">Reveal Answer</button></p>
+
+
+</body>
+
+<footer>
+	<p>©2025 Web Technologies Essentials</p> 
+</footer>
+</html>
